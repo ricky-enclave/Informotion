@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Informotion</title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Main CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    
+</head>
+
+<body class="font-sans antialiased bg-foreground text-background text-base flex flex-col">
+  <!-- Smooth Scroll Wrapper -->
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      
+      <!-- Hero Section -->
+      <section class="relative z-0 text-background">
+        <div class="absolute inset-0 size-full -z-10 overflow-hidden">
+          <video 
+            class="size-full object-cover"
+            width="1920" 
+            height="1080" 
+            preload="auto" 
+            autoplay
+            muted
+            playsinline
+            loop
+            poster="assets/images/posters/informotion-gradient-animation.jpg"
+          >
+            <source src="assets/videos/informotion-gradient-animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="container">
+          <div class="py-12 md:py-16 lg:py-20 xl:py-24 min-h-svh flex flex-col justify-between gap-20">
+            <a class="animate-fade-in" href="index.html">
+              <img class="w-64 md:w-80 lg:w-96 xl:w-auto" width="423" height="84" src="assets/images/svg/logo.svg" alt="logo" />
+            </a>
+            <div class="flex flex-col gap-5 lg:gap-10">
+              <h1 class="title animate-heading">
+                <div class="font-medium">Information in motion.</div>
+                <div class="font-normal md:-mt-4">Intelligence in action.</div>
+              </h1>
+              <p class="max-w-[610px] animate-paragraph">We enable organisations to master their information. Securing, governing, and modernising data, while unlocking the power of Cloud, AI and analytics to deliver insight, confidence and lasting transformation. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+      <section class="relative z-0 overflow-hidden bg-background text-foreground">
+        <div class="absolute inset-0 size-full -z-10 overflow-hidden">
+          <video 
+            class="size-full object-cover mt-6"
+            width="1868" 
+            height="1312" 
+            preload="auto" 
+            autoplay
+            muted
+            playsinline
+            loop
+            poster="assets/images/posters/informotion-dots-animation.jpg"
+          >
+            <source src="assets/videos/informotion-dots-animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="container">
+          <div class="py-20 md:py-24 grid -mx-10 lg:mx-0 lg:grid-cols-[795px_1fr] xl:grid-cols-[1030px_1fr] items-center min-h-svh">
+            <div class="flex flex-col gap-5 md:gap-10 bg-background pl-10 lg:pl-0 pr-10 xl:pr-24 py-12 relative after:hidden after:lg:block after:left-0 after:top-0 after:bottom-0 after:absolute after:-translate-x-full after:bg-background after:w-full after:h-full">
+              <h2 class="animate-heading">We enable organisations to master their information.</h2>
+              <p class="animate-paragraph lg:self-end lg:max-w-[513px] split">Founded in 2013, Informotion has specialised in compliance and records management, guiding regulated organisations globally through complexity with clarity, confidence, and proven expertise. 
+                <br/><br/>
+                Today, as data moves to Cloud, AI, and automation, Informotion 
+                bridges heritage governance with future-ready innovation. Combining decades of compliance mastery with innovative AI, Cloud, and automation tools, we help organisations transform complex data into actionable insights, wherever they operate. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section -->
+      <section id="bgColorSwap" class="my-20 md:my-24 lg:my-28 xl:my-32">
+        <div class="container">
+          <div class="grid grid-cols-1 xl:grid-cols-[460px_1fr] gap-10 md:gap-20 2xl:gap-24">
+             <div class="flex flex-col gap-5 md:gap-10 relative">
+              <h2 class="animate-heading">What We Do</h2>
+              <p class="animate-paragraph">Collectively the experience of Informotion’s team goes well beyond 250 years, with many members having worked in the Records and Information Management space for more than 25 years. 
+                <br/><br/>
+                In 2025 Informotion expanded beyond its traditional skill set with the establishment of a highly credentialed Microsoft Cloud & AI practice including Microsoft recognised Most Valuable Professional’s (MVP’s). Today we have experts that span records management through data and information governance to AI.  </p>
+             </div>
+             <div class="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-5 relative xl:mt-32">
+                <div class="flex flex-col items-start">
+                  <h4 class="animate-heading font-medium">Cloud & AI</h4>
+                  <div class="bg-color-swap-card animate-fade-in-up bg-background text-foreground flex flex-col px-6 py-8 rounded-[30px] mt-7 mb-8 w-full">
+                    <div class="grid grid-cols-1">
+                      <ul class="text-base leading-[2] list-disc pl-5">
+                        <li>Enterprise Enablement & Adoption</li>
+                        <li>Data & Governance Foundations</li>
+                        <li>AI Design & Deployment</li>
+                        <li>Low-code & Pro-code</li>
+                        <li>Legacy Application Modernisation</li>
+                        <li>Compliance, Risk & Data Sovereignty</li>
+                        <li>Project Management</li>
+                        <li>Enablement & Training</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="animate-fade-in-up">
+                  <!-- Animated Button -->
+                  <button  x-init="window.initGsapFlairButton && window.initGsapFlairButton($el)" data-gsap-button type="button" class="group relative h-[46px] shrink-0 hover:text-foreground duration-300 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
+                      <!-- flair layer  -->
+                      <span data-gsap-btn-flair class="button-flair pointer-events-none absolute inset-0 scale-0 origin-top-left will-change-transform after:absolute after:top-0 after:left-0 after:w-[170%] after:aspect-square after:rounded-full after:bg-primary after:-translate-x-1/2 after:-translate-y-1/2 after:pointer-events-none"></span>
+                      <span class="relative z-10">Download PDF</span>
+                      <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
+                        <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
+                          <svg
+                            class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 group-hover:ml-4 group-hover:-my-4 group-hover:opacity-0 duration-300"
+                            width="43"
+                            height="43"
+                            viewBox="0 0 43 43"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_8176_59)">
+                              <path
+                                d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_8176_59">
+                                <rect
+                                  width="29.858"
+                                  height="29.858"
+                                  fill="white"
+                                  transform="translate(0 21.1128) rotate(-45)"
+                                />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <svg
+                          class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 -ml-4 my-4 group-hover:ml-0 group-hover:my-0 duration-300"
+                          width="43"
+                          height="43"
+                          viewBox="0 0 43 43"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_8176_59)">
+                            <path
+                              d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_8176_59">
+                              <rect
+                                width="29.858"
+                                height="29.858"
+                                fill="white"
+                                transform="translate(0 21.1128) rotate(-45)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                      </div>
+                  </button>
+                </div>
+                </div>
+              
+
+              <div class="flex flex-col items-start">
+                <h4 class="animate-heading font-medium">Data & Information Governance </h4>
+                <div class="bg-color-swap-card animate-fade-in-up bg-background text-foreground flex flex-col px-6 py-8 rounded-[30px] mt-7 mb-8 w-full">
+                  <div class="grid md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2">
+                    <ul class="text-base leading-[2] list-disc pl-5">                      
+                      <li>Data Discovery & Analysis</li>
+                      <li>AI-Ready Data</li>
+                      <li>Personal & Sensitive Data</li>
+                      <li>Data Transformation & Migration</li>
+                      <li>Data Lineage</li>
+                      <li>Compliance, Risk & Data Sovereignty</li>
+                      <li>Strategy & Policy Development</li>
+                      <li>Information Architecture</li>
+                    </ul>
+                    <ul class="text-base leading-[2] list-disc pl-5">
+                      <li>Retention & Disposal</li>
+                      <li>Business Classification</li>
+                      <li>Machinery of Government Transformation</li>
+                      <li>Content Manager optimisation</li>
+                      <li>Project Management</li>
+                      <li>Enablement & Training</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="animate-fade-in-up">
+                <!-- Animated Button -->
+                <button  x-init="window.initGsapFlairButton && window.initGsapFlairButton($el)" data-gsap-button type="button" class="group relative h-[46px] shrink-0 hover:text-foreground duration-300 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
+                  <!-- flair layer  -->
+                  <span data-gsap-btn-flair class="button-flair pointer-events-none absolute inset-0 scale-0 origin-top-left will-change-transform after:absolute after:top-0 after:left-0 after:w-[170%] after:aspect-square after:rounded-full after:bg-primary after:-translate-x-1/2 after:-translate-y-1/2 after:pointer-events-none"></span>
+                  <span class="relative z-10">Download PDF</span>
+                  <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
+                    <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
+                      <svg
+                        class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 group-hover:ml-4 group-hover:-my-4 group-hover:opacity-0 duration-300"
+                        width="43"
+                        height="43"
+                        viewBox="0 0 43 43"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_8176_59)">
+                          <path
+                            d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_8176_59">
+                            <rect
+                              width="29.858"
+                              height="29.858"
+                              fill="white"
+                              transform="translate(0 21.1128) rotate(-45)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <svg
+                      class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 -ml-4 my-4 group-hover:ml-0 group-hover:my-0 duration-300"
+                      width="43"
+                      height="43"
+                      viewBox="0 0 43 43"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_8176_59)">
+                        <path
+                          d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8176_59">
+                          <rect
+                            width="29.858"
+                            height="29.858"
+                            fill="white"
+                            transform="translate(0 21.1128) rotate(-45)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  </div>
+              </button>
+            </div>
+              </div>
+
+             </div>
+          </div>
+        </div>
+      </section>
+
+       <!-- Section -->
+       <section class="my-20 md:my-24 lg:my-28 xl:my-32">
+        <div class="container">
+          <div class="grid xl:grid-cols-12 gap-10 md:gap-16 lg:gap-20 2xl:gap-28">
+             <div class="flex flex-col gap-10 relative xl:col-span-7">
+              <h2 class="animate-heading">Our Products & Platforms</h2>
+              <div class="animate-fade-in overflow-hidden">
+                <img data-speed="0.8" width="853" height="582" class="aspect-853/582 w-full object-cover scale-150 md:scale-110" src="assets/images/home/products-platforms.webp" alt="products & platforms">
+              </div>
+             </div>
+            <div class="xl:col-span-5 flex flex-col gap-7 xl:mt-32">
+              <p class="animate-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+              <div x-data="{ open: null, items: [
+                  { id: 1, title: 'Microsoft' },
+                  { id: 2, title: 'EncompaaS' },
+                  { id: 3, title: 'Opentext Content Manager' },
+                  { id: 4, title: 'InReach & InTouch' },
+                  { id: 5, title: 'Informotion Fusion' },
+                  { id: 6, title: 'Informotion Content Linx' },
+              ] }" class="animate-fade-in-up flex flex-col gap-2">
+                  <template x-for="item in items" :key="item.id">
+                      <div  class="rounded-[30px] bg-foreground text-background flex flex-col py-3 px-7">
+                          <!-- Button -->
+                          <button
+                              class="w-full cursor-pointer flex items-center justify-between gap-4"
+                              @click="open === item.id ? open = null : open = item.id"
+                          >
+                              <h5 class="font-medium" x-text="item.title"></h5>
+              
+                              <span class="flex size-3.5 items-center justify-center">
+                                  <!-- Show Plus / Minus -->
+                                  <span x-show="open !== item.id">
+                                      <img src="assets/images/svg/plus.svg" alt="plus">
+                                  </span>
+                                  <span x-show="open === item.id">
+                                      <img src="assets/images/svg/minus.svg" alt="minus">
+                                  </span>
+                              </span>
+                          </button>
+              
+                          <!-- Content -->
+                          <div
+                              class="flex flex-col gap-7 items-start"
+                              x-show="open === item.id"
+                              x-collapse
+                          >
+                              <p class="mt-5">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                  aliquip ex ea commodo consequat.<br><br>
+                                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                  laborum.
+                              </p>
+                              
+                                  <!-- Animated Button -->
+                                <button x-init="window.initGsapFlairButton && window.initGsapFlairButton($el)" data-gsap-button type="button" class="group relative h-[46px] shrink-0 hover:text-foreground duration-300 bg-background text-foreground text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
+                                    <!-- flair layer  -->
+                                    <span data-gsap-btn-flair class="button-flair pointer-events-none absolute inset-0 scale-0 origin-top-left will-change-transform after:absolute after:top-0 after:left-0 after:w-[170%] after:aspect-square after:rounded-full after:bg-primary after:-translate-x-1/2 after:-translate-y-1/2 after:pointer-events-none"></span>
+                                    <span class="relative z-10">Download PDF</span>
+                                    <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
+                                      <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
+                                        <svg
+                                          class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 group-hover:ml-4 group-hover:-my-4 group-hover:opacity-0 duration-300"
+                                          width="43"
+                                          height="43"
+                                          viewBox="0 0 43 43"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <g clip-path="url(#clip0_8176_59)">
+                                            <path
+                                              d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
+                                              stroke="currentColor"
+                                              stroke-width="1.5"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            />
+                                            <path
+                                              d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            />
+                                          </g>
+                                          <defs>
+                                            <clipPath id="clip0_8176_59">
+                                              <rect
+                                                width="29.858"
+                                                height="29.858"
+                                                fill="white"
+                                                transform="translate(0 21.1128) rotate(-45)"
+                                              />
+                                            </clipPath>
+                                          </defs>
+                                        </svg>
+                                        <svg
+                                        class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 -ml-4 my-4 group-hover:ml-0 group-hover:my-0 duration-300"
+                                        width="43"
+                                        height="43"
+                                        viewBox="0 0 43 43"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <g clip-path="url(#clip0_8176_59)">
+                                          <path
+                                            d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
+                                            stroke="currentColor"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                          <path
+                                            d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                          />
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8176_59">
+                                            <rect
+                                              width="29.858"
+                                              height="29.858"
+                                              fill="white"
+                                              transform="translate(0 21.1128) rotate(-45)"
+                                            />
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    </div>
+                                    </div>
+                                </button>
+                            
+                          </div>
+                      </div>
+                  </template>
+              </div>
+               
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+       <!-- Section -->
+       <section class="my-20 md:my-24 lg:my-28 xl:my-32">
+        <div class="container">
+          <div class="grid xl:grid-cols-12 gap-10 md:gap-20 2xl:gap-28">
+             <div class="flex flex-col gap-5 md:gap-10 relative xl:col-span-6">
+              <h2 class="animate-heading">Addressing Privacy & Sensitive Information Risk at Scale.</h2>
+              <p class="animate-paragraph">Informotion helps State Government Department scan for personal and sensitive information - averaging 120k documents per day.<br/><br/>
+                Informotion worked with its client to scan repositories for personal and sensitive information in a way that was affordable and scalable. An average scanning throughput of approximately 120,000 electronic documents per day was achieved for phase one of this project. Estimated costs for scanning these items were calculated at approximately 2.8 cents (AUD) per document.  <br/><br/>
+                Informotion collaborated with the Department's staff to design a tailored dashboard that provides comprehensive visibility into both high-risk and low-risk documents.· 20 different criteria were used to make the risk determination.  · Percentage by risk criteria was presented as a pie chart for faster insights.· Sensitivity risk was identified by department to enable targeted remediation.· High risk items were listed and clickable for further investigation.<br/><br/>
+                Phase one of the project conducted over an 8-day period, uncovered 13,700 electronic documents assessed as high sensitivity. The items included banking, passport, credit card, tax file number and drivers licence details.</p>
+             </div>
+             <div class="xl:col-span-6 animate-fade-in overflow-hidden">
+              <img data-speed="0.8" width="853" height="582" class="aspect-853/582 w-full object-cover  scale-150 md:scale-110" src="assets/images/home/info-risk.webp" alt="Info risk">
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      
+       <!-- Section -->
+       <section class="py-20 md:py-24 lg:py-28 xl:py-32 relative z-0 text-background">
+        <div class="absolute inset-0 size-full -z-10 overflow-hidden">
+          <video 
+            class="size-full object-cover"
+            width="1920" 
+            height="1080" 
+            preload="auto" 
+            autoplay
+            muted
+            playsinline
+            loop
+            poster="assets/images/posters/informotion-gradient-animation.jpg"
+          >
+            <source src="assets/videos/informotion-gradient-animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="container">
+           <div class="flex flex-col gap-10 md:gap-20">
+            <div class="grid xl:grid-cols-2 gap-10 md:gap-16 lg:gap-20 2xl:gap-32">
+              <div class="flex flex-col gap-5 md:gap-10">
+                <h2 class="animate-heading">Proud to guide these organisations on their data journeys.</h2>
+                <p class="animate-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="animate-fade-in overflow-hidden">
+                <img data-speed="0.8" width="814" height="472" class="aspect-814/472 object-cover w-full  scale-150 md:scale-110" src="assets/images/home/proud-partners.webp" alt="proud partners">
+              </div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 lg:gap-7">
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="192" height="64" src="assets/images/logos/rural-city-of-wangaratta.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="150" height="52" src="assets/images/logos/uni-sydney.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="237" height="71" src="assets/images/logos/dept-parliament.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="152" height="80" src="assets/images/logos/australian-government.png" alt="logo" />
+              </div>
+              
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="153" height="79" src="assets/images/logos/frnsw-logo.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="70" height="76" src="assets/images/logos/nsw-government.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="177" height="53" src="assets/images/logos/victoria-health.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="195" height="53" src="assets/images/logos/victoria-safety.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="201" height="56" src="assets/images/logos/port-stephens-council.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="144" height="61" src="assets/images/logos/westfund.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="200" height="30" src="assets/images/logos/natwest.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="174" height="60" src="assets/images/logos/bathust.png" alt="logo" />
+              </div>
+              <div class="animate-fade-in-up p-5 h-[120px] flex items-center justify-center bg-foreground rounded-[10px]">
+                <img width="135" height="90" src="assets/images/logos/nswforests.png" alt="logo" />
+              </div>
+            </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+      <section class="relative z-0 overflow-hidden bg-background text-foreground">
+        <div class="absolute inset-0 size-full -z-10 overflow-hidden">
+          <video 
+            class="size-full object-cover mt-3"
+            width="1868" 
+            height="1312" 
+            preload="auto" 
+            autoplay
+            muted
+            playsinline
+            loop
+            poster="assets/images/posters/informotion-dots-animation.jpg"
+          >
+            <source src="assets/videos/informotion-dots-animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="container">
+          <div class="py-20 md:py-24 grid -mx-10 lg:mx-0 lg:grid-cols-[864px_1fr] xl:grid-cols-[1100px_1fr] items-center min-h-[644px]">
+            <div class="flex flex-col gap-10 bg-background pl-10 lg:pr-0 pr-10 xl:pr-24 py-12 relative after:hidden after:lg:block after:left-0 after:top-0 after:bottom-0 after:absolute after:-translate-x-full after:bg-background after:w-full after:h-full">
+              <h2 class="animate-heading">Speak with our team about tailored data and AI solutions</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="py-20 md:py-24 lg:py-28">
+        <div class="container">
+          <div class="flex flex-col xl:flex-row justify-between gap-20">
+            <div class="flex flex-col justify-between gap-16">
+              <a href="index.html">
+                <img class="w-64 md:w-80 lg:w-96 xl:w-auto" width="423" height="84" src="assets/images/svg/logo-alt.svg" alt="logo" />
+              </a>
+              <ul class="flex flex-col gap-1.5 text-[17px] leading-[1.42]">
+                <li class="group">
+                  <a href="javascript:;" 
+                     class="relative inline-block pb-0.5
+                       after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:bg-current
+                       after:transition-transform after:duration-300 after:scale-x-0 after:origin-right
+                       group-hover:after:origin-left
+                       hover:after:scale-x-100"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li class="group">
+                  <a href="javascript:;" 
+                     class="relative inline-block pb-0.5
+                       after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:bg-current
+                       after:transition-transform after:duration-300 after:scale-x-0 after:origin-right
+                       group-hover:after:origin-left
+                       hover:after:scale-x-100"
+                  >
+                    Terms of Use
+                  </a>
+                </li>
+               
+                <li>&copy;  Informotion 2025 </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-8">
+              <div class="text-[45px] leading-none">Contact</div>
+              <div class="grid md:grid-cols-3 xl:grid-cols-[262px_262px_162px] gap-5">
+                <div class="flex flex-col gap-10">
+                    <p class="group">Australia <br/>T -
+                      <a  href="tel:1300474288"
+                         class="relative inline-block pb-0.5
+                           after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:bg-current
+                           after:transition-transform after:duration-300 after:scale-x-0 after:origin-right
+                           group-hover:after:origin-left
+                           hover:after:scale-x-100"
+                      >
+                      1 300 474 288
+                      </a>
+                  </p>
+                  </p>
+                  <p>L12, 50 Carrington St,<br/> Sydney NSW 2000.</p>
+                </div>
+                <div class="flex flex-col gap-10">
+                  <p class="group">United Kingdom <br/>T -
+                      <a  href="tel:18006163842"
+                         class="relative inline-block pb-0.5
+                           after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:bg-current
+                           after:transition-transform after:duration-300 after:scale-x-0 after:origin-right
+                           group-hover:after:origin-left
+                           hover:after:scale-x-100"
+                      >
+                      1 800 616 3842
+                      </a>
+                  </p>
+                  <p>United Kingdom Office<br/>Waterside<br/>1650 Arlington Business Park<br/>Theale Reading<br/>Berkshire, RG7 4SA</p>
+                </div>
+                <div class="mt-10 md:mt-auto flex md:justify-end">
+                  <a data-backtotop class="flex items-center gap-2" href="javascript:;">Back to Top <img src="assets/images/svg/up.svg" alt="up"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  
+</body>
+
+<!--  GSAP -->  
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- ScrollSmoother requires ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<!-- Alpine Plugins -->
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+<!-- Alpine Core -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Main JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+ 
+</html>
