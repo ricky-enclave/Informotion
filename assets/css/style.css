@@ -1002,6 +1002,16 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .\32 xl\:grid-cols-\[1\.3fr_1fr\] {
+    @media (width >= 96rem) {
+      grid-template-columns: 1.3fr 1fr;
+    }
+  }
+  .\32 xl\:grid-cols-\[288px_1fr\] {
+    @media (width >= 96rem) {
+      grid-template-columns: 288px 1fr;
+    }
+  }
   .\32 xl\:gap-24 {
     @media (width >= 96rem) {
       gap: calc(var(--spacing) * 24);
