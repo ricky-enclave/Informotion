@@ -110,49 +110,51 @@
   // -----------------------
 // Body BG Color Swap on Section
 // -----------------------
-const colorSwapSection = document.querySelector("#bgColorSwap");
+// const colorSwapSection = document.querySelector("#bgColorSwap");
 
-if (colorSwapSection) {
+// if (colorSwapSection) {
    
-  const colorTl = gsap.timeline({ paused: true });
+//   const colorTl = gsap.timeline({ paused: true });
 
-  colorTl
+//   colorTl
     
-    .to(
-      "body",
-      {
-        backgroundColor: "var(--color-background)",
-        color: "var(--color-foreground)",
-        duration: 1.5,
-        ease: "power2.out",
-      },
-      0
-    )
-    .to(
-      "#bgColorSwap .bg-color-swap-card",
-      {
-        backgroundColor: "var(--color-foreground)",
-        color: "var(--color-background)",
-        duration: 1.5,
-        ease: "power2.out",
-      },
-      0
-    );
+//     .to(
+//       "body",
+//       {
+//         backgroundColor: "var(--color-background)",
+//         color: "var(--color-foreground)",
+//         duration: 1.5,
+//         ease: "power2.out",
+//       },
+//       0
+//     )
+//     .to(
+//       "#bgColorSwap .bg-color-swap-card",
+//       {
+//         backgroundColor: "var(--color-foreground)",
+//         color: "var(--color-background)",
+//         duration: 1.5,
+//         ease: "power2.out",
+//       },
+//       0
+//     );
 
-  ScrollTrigger.create({
-    trigger: colorSwapSection,
-    start: "top center",
-    // markers: true,
-    onEnter: () => colorTl.play(),
-    onLeaveBack: () => colorTl.reverse(),
-  });
-}
+//   ScrollTrigger.create({
+//     trigger: colorSwapSection,
+//     start: "top center",
+//     // markers: true,
+//     onEnter: () => colorTl.play(),
+//     onLeaveBack: () => colorTl.reverse(),
+//   });
+// }
 
  
 
  // -----------------------
 // SplitText: heading + paragraph per section
 // -----------------------
+
+document.fonts.ready.then(() => {
 gsap.utils.toArray("section").forEach((section) => {
   const heading = section.querySelectorAll(".animate-heading");
   const paragraph = section.querySelectorAll(".animate-paragraph");
@@ -210,6 +212,9 @@ gsap.utils.toArray("section").forEach((section) => {
   }
 });
 
+ScrollTrigger.refresh();
+});
+
 // -----------------------
 // Fade-In per section
 // -----------------------
@@ -220,7 +225,7 @@ gsap.utils.toArray("section").forEach((section) => {
   gsap.from(fadeInEls, {
     scrollTrigger: {
       trigger: section,
-      start: "top 30%",
+      start: "top center",
       once: true,
     },
     opacity: 0,
@@ -250,5 +255,6 @@ gsap.utils.toArray("section").forEach((section) => {
     ease: "power3.out",
   });
 });
+
 
 })();

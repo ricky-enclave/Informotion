@@ -30,8 +30,8 @@ html, body, .scrollbar {
     
     --breakpoint-3xl: 1920px;
     /* Container Settings */
-    --container-max-width: 1680px;
-    --container-padding: 120px;
+    --container-max-width: 1760px;
+    --container-padding: 40px;
     --container-padding-3xl: 40px;
     --container-padding-md: 20px;
 }
@@ -42,11 +42,11 @@ html, body, .scrollbar {
    @apply mx-auto w-full !max-w-[var(--container-max-width)] px-[var(--container-padding)] max-3xl:px-[var(--container-padding-3xl)] max-md:px-[var(--container-padding-md)];
  }
  .title {
-  @apply text-[55px] md:text-[68px] lg:text-[90px] xl:text-[105px] leading-none md:leading-[1.16]
+  @apply text-[55px] md:text-[68px] lg:text-[90px] xl:text-[105px] leading-[1.2] md:leading-[1.16]
  }
 
  h2, .h2 {
-  @apply text-[40px] md:text-[50px] lg:text-[60px] xl:text-[75px] leading-[1.1]
+  @apply text-[40px] md:text-[50px] lg:text-[60px] xl:text-[75px] leading-[1.17]
  }
 
 
