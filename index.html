@@ -118,48 +118,22 @@
                   </div>
                   <div class="animate-fade-in-up">
                   <!-- Animated Button -->
-                  <button  x-init="window.initGsapFlairButton && window.initGsapFlairButton($el)" data-gsap-button type="button" class="group relative h-[46px] shrink-0 hover:text-foreground duration-300 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
-                      <!-- flair layer  -->
-                      <span data-gsap-btn-flair class="button-flair pointer-events-none absolute inset-0 scale-0 origin-top-left will-change-transform after:absolute after:top-0 after:left-0 after:w-[170%] after:aspect-square after:rounded-full after:bg-primary after:-translate-x-1/2 after:-translate-y-1/2 after:pointer-events-none"></span>
-                      <span class="relative z-10">Download PDF</span>
-                      <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
-                        <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
-                          <svg
-                            class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 group-hover:ml-4 group-hover:-my-4 group-hover:opacity-0 duration-300"
-                            width="43"
-                            height="43"
-                            viewBox="0 0 43 43"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clip-path="url(#clip0_8176_59)">
-                              <path
-                                d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                              <path
-                                d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_8176_59">
-                                <rect
-                                  width="29.858"
-                                  height="29.858"
-                                  fill="white"
-                                  transform="translate(0 21.1128) rotate(-45)"
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                          <svg
-                          class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 -ml-4 my-4 group-hover:ml-0 group-hover:my-0 duration-300"
+                  <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
+                    <!-- flair layer -->
+                      <span
+                      data-flair-bg
+                      class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"
+                    ></span>
+                    <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
+                      <span>Download PDF</span>
+                      <span>Download PDF</span>
+                      <span>Download PDF</span>
+                    </div>
+                    <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
+                      <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
+                        <svg
+                          data-flair-icon
+                          class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
                           width="43"
                           height="43"
                           viewBox="0 0 43 43"
@@ -192,9 +166,11 @@
                             </clipPath>
                           </defs>
                         </svg>
-                      </div>
-                      </div>
+                     
+                    </div>
+                    </div>
                   </button>
+            
                 </div>
                 </div>
               
@@ -226,15 +202,24 @@
                   </div>
                 </div>
                 <div class="animate-fade-in-up">
+                
                 <!-- Animated Button -->
-                <button  x-init="window.initGsapFlairButton && window.initGsapFlairButton($el)" data-gsap-button type="button" class="group relative h-[46px] shrink-0 hover:text-foreground duration-300 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
-                  <!-- flair layer  -->
-                  <span data-gsap-btn-flair class="button-flair pointer-events-none absolute inset-0 scale-0 origin-top-left will-change-transform after:absolute after:top-0 after:left-0 after:w-[170%] after:aspect-square after:rounded-full after:bg-primary after:-translate-x-1/2 after:-translate-y-1/2 after:pointer-events-none"></span>
-                  <span class="relative z-10">Download PDF</span>
+                <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
+                  <!-- flair layer -->
+                    <span
+                    data-flair-bg
+                    class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"
+                  ></span>
+                  <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
+                    <span>Download PDF</span>
+                    <span>Download PDF</span>
+                    <span>Download PDF</span>
+                  </div>
                   <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
                     <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
                       <svg
-                        class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 group-hover:ml-4 group-hover:-my-4 group-hover:opacity-0 duration-300"
+                        data-flair-icon
+                        class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
                         width="43"
                         height="43"
                         viewBox="0 0 43 43"
@@ -267,43 +252,10 @@
                           </clipPath>
                         </defs>
                       </svg>
-                      <svg
-                      class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 -ml-4 my-4 group-hover:ml-0 group-hover:my-0 duration-300"
-                      width="43"
-                      height="43"
-                      viewBox="0 0 43 43"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_8176_59)">
-                        <path
-                          d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_8176_59">
-                          <rect
-                            width="29.858"
-                            height="29.858"
-                            fill="white"
-                            transform="translate(0 21.1128) rotate(-45)"
-                          />
-                        </clipPath>
-                      </defs>
-                    </svg>
+                   
                   </div>
                   </div>
-              </button>
+                </button>
             </div>
               </div>
 
@@ -319,7 +271,7 @@
              <div class="flex flex-col gap-10 relative xl:col-span-7">
               <h2 class="animate-heading">Our Products & Platforms</h2>
               <div class="animate-fade-in overflow-hidden">
-                <img data-speed="0.8" width="853" height="582" class="aspect-853/582 w-full object-cover scale-150 md:scale-110" src="assets/images/home/products-platforms.webp" alt="products & platforms">
+                <img data-speed="0.9" width="853" height="582" class="aspect-853/582 w-full object-cover scale-150 md:scale-110" src="assets/images/home/products-platforms.webp" alt="products & platforms">
               </div>
              </div>
             <div class="xl:col-span-5 flex flex-col gap-7 xl:mt-32">
@@ -373,83 +325,58 @@
                               </p>
                               
                                   <!-- Animated Button -->
-                                <button x-init="window.initGsapFlairButton && window.initGsapFlairButton($el)" data-gsap-button type="button" class="group relative h-[46px] shrink-0 hover:text-foreground duration-300 bg-background text-foreground text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
-                                    <!-- flair layer  -->
-                                    <span data-gsap-btn-flair class="button-flair pointer-events-none absolute inset-0 scale-0 origin-top-left will-change-transform after:absolute after:top-0 after:left-0 after:w-[170%] after:aspect-square after:rounded-full after:bg-primary after:-translate-x-1/2 after:-translate-y-1/2 after:pointer-events-none"></span>
-                                    <span class="relative z-10">Download PDF</span>
-                                    <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
-                                      <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
-                                        <svg
-                                          class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 group-hover:ml-4 group-hover:-my-4 group-hover:opacity-0 duration-300"
-                                          width="43"
-                                          height="43"
-                                          viewBox="0 0 43 43"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <g clip-path="url(#clip0_8176_59)">
-                                            <path
-                                              d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
-                                              stroke="currentColor"
-                                              stroke-width="1.5"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                            />
-                                            <path
-                                              d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                            />
-                                          </g>
-                                          <defs>
-                                            <clipPath id="clip0_8176_59">
-                                              <rect
-                                                width="29.858"
-                                                height="29.858"
-                                                fill="white"
-                                                transform="translate(0 21.1128) rotate(-45)"
-                                              />
-                                            </clipPath>
-                                          </defs>
-                                        </svg>
-                                        <svg
-                                        class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 -ml-4 my-4 group-hover:ml-0 group-hover:my-0 duration-300"
-                                        width="43"
-                                        height="43"
-                                        viewBox="0 0 43 43"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <g clip-path="url(#clip0_8176_59)">
-                                          <path
-                                            d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                          />
-                                          <path
-                                            d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                          />
-                                        </g>
-                                        <defs>
-                                          <clipPath id="clip0_8176_59">
-                                            <rect
-                                              width="29.858"
-                                              height="29.858"
-                                              fill="white"
-                                              transform="translate(0 21.1128) rotate(-45)"
-                                            />
-                                          </clipPath>
-                                        </defs>
-                                      </svg>
-                                    </div>
-                                    </div>
-                                </button>
+                               <button x-init="window.initFlairButton && window.initFlairButton($el)" data-flair-btn type="button" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-background text-foreground text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
+                    <!-- flair layer -->
+                      <span
+                      data-flair-bg
+                      class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"
+                    ></span>
+                    <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
+                      <span>Download PDF</span>
+                      <span>Download PDF</span>
+                      <span>Download PDF</span>
+                    </div>
+                    <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
+                      <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
+                        <svg
+                          data-flair-icon
+                          class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+                          width="43"
+                          height="43"
+                          viewBox="0 0 43 43"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_8176_59)">
+                            <path
+                              d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_8176_59">
+                              <rect
+                                width="29.858"
+                                height="29.858"
+                                fill="white"
+                                transform="translate(0 21.1128) rotate(-45)"
+                              />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                     
+                    </div>
+                    </div>
+                  </button>
                             
                           </div>
                       </div>
@@ -476,7 +403,7 @@
               </div>
              </div>
              <div class="xl:col-span-6 animate-fade-in overflow-hidden">
-              <img data-speed="0.8" width="853" height="582" class="aspect-853/582 w-full object-cover  scale-150 md:scale-110" src="assets/images/home/info-risk.webp" alt="Info risk">
+              <img data-speed="0.9" width="853" height="582" class="aspect-853/582 w-full object-cover  scale-150 md:scale-110" src="assets/images/home/info-risk.webp" alt="Info risk">
             </div>
             
           </div>
@@ -512,7 +439,7 @@
                 </div>
               </div>
               <div class="animate-fade-in overflow-hidden">
-                <img data-speed="0.8" width="814" height="472" class="aspect-814/472 object-cover w-full  scale-150 md:scale-110" src="assets/images/home/proud-partners.webp" alt="proud partners">
+                <img data-speed="0.9" width="814" height="472" class="aspect-814/472 object-cover w-full  scale-150 md:scale-110" src="assets/images/home/proud-partners.webp" alt="proud partners">
               </div>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 lg:gap-7">

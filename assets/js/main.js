@@ -11,90 +11,197 @@
     effects: true,
   });
 
-  // -----------------------
-  // Flair Button Effect
-  // -----------------------
-  class GsapFlairButton {
-    constructor(root) {
-      this.button = root;
-      this.flair = root.querySelector("[data-gsap-btn-flair]");
-      if (!this.flair) return;
 
-      this.xSet = gsap.quickSetter(this.flair, "xPercent");
-      this.ySet = gsap.quickSetter(this.flair, "yPercent");
 
-      this.initEvents();
-    }
+gsap.utils.toArray("[data-flair-btn]").forEach((btn) => {
+  const flair = btn.querySelector("[data-flair-bg]");
+  const wrapper = btn.querySelector("[data-flair-text]");
+  if (!flair || !wrapper) return;
 
-    getXY(e) {
-      const { left, top, width, height } = this.button.getBoundingClientRect();
+  const [t1, t2, t3] = wrapper.children;
 
-      const xTransformer = gsap.utils.pipe(
-        gsap.utils.mapRange(0, width, 0, 100),
-        gsap.utils.clamp(0, 100)
-      );
+  // initial states
+  gsap.set(flair, { yPercent: 100 });   // flair below
+  gsap.set([t1, t2, t3], { yPercent: 0 }); // all texts at natural positions
 
-      const yTransformer = gsap.utils.pipe(
-        gsap.utils.mapRange(0, height, 0, 100),
-        gsap.utils.clamp(0, 100)
-      );
+  btn.addEventListener("mouseenter", () => {
+    gsap.killTweensOf([flair, t1, t2, t3]);
 
-      return {
-        x: xTransformer(e.clientX - left),
-        y: yTransformer(e.clientY - top),
-      };
-    }
+    // flair: bottom -> center
+    gsap.set(flair, { yPercent: 100 });
+    gsap.to(flair, {
+      yPercent: 0,
+      duration: 0.5,
+      ease: "expo.out",
+    });
 
-    initEvents() {
-      this.button.addEventListener("mouseenter", (e) => {
-        const { x, y } = this.getXY(e);
+    // text: all from 0 -> -100
+    gsap.to([t1, t2, t3], {
+      yPercent: -100,
+      duration: 0.5,
+      ease: "expo.out",
+    });
+  });
 
-        this.xSet(x);
-        this.ySet(y);
+  btn.addEventListener("mouseleave", () => {
+    gsap.killTweensOf([flair, t1, t2, t3]);
 
-        gsap.to(this.flair, {
-          scale: 1,
-          duration: 0.4,
-          ease: "power2.out",
-        });
-      });
+    // flair: center -> top
+    gsap.to(flair, {
+      yPercent: -100,
+      duration: 0.5,
+      ease: "expo.out",
+    });
 
-      this.button.addEventListener("mouseleave", (e) => {
-        const { x, y } = this.getXY(e);
+    // text: all from -100 -> -200
+    gsap.to([t1, t2, t3], {
+      yPercent: -200,
+      duration: 0.5,
+      ease: "expo.out",
+      onComplete() {
+        // reset everything back to start (invisible jump)
+        gsap.set(flair, { yPercent: 100 });
+        gsap.set([t1, t2, t3], { yPercent: 0 });
+      },
+    });
+  });
+});
 
-        gsap.killTweensOf(this.flair);
 
-        gsap.to(this.flair, {
-          xPercent: x > 90 ? x + 20 : x < 10 ? x - 20 : x,
-          yPercent: y > 90 ? y + 20 : y < 10 ? y - 20 : y,
-          scale: 0,
-          duration: 0.3,
-          ease: "power2.out",
-        });
-      });
 
-      this.button.addEventListener("mousemove", (e) => {
-        const { x, y } = this.getXY(e);
+ // -----------------------
+// Flair Button — Slide Up / Reset Loop
+// -----------------------
+window.initFlairButton = (btn) => {
+  if (btn.__flairInit) return;
+  btn.__flairInit = true;
 
-        gsap.to(this.flair, {
-          xPercent: x,
-          yPercent: y,
-          duration: 0.4,
-          ease: "power2",
-        });
-      });
-    }
+  const flair   = btn.querySelector("[data-flair-bg]");
+  const wrapper = btn.querySelector("[data-flair-text]");
+  const icon    = btn.querySelector("[data-flair-icon], svg"); // optional icon
+
+  if (!flair || !wrapper) return;
+
+  const [t1, t2, t3] = wrapper.children;
+
+  // ------------------------
+  // Initial state
+  // ------------------------
+  gsap.set(flair, { yPercent: 100 });
+
+  // only first text visible, others clipped
+  gsap.set(t1, { yPercent: 0, clipPath: "inset(0% 0% 0% 0)" });
+  gsap.set([t2, t3], { yPercent: 0, clipPath: "inset(100% 0% 0% 0)" });
+
+  if (icon) {
+    gsap.set(icon, { transformOrigin: "60% 40%" }); 
   }
 
-  // Global helper (Alpine version)
-  window.initGsapFlairButton = function (el) {
-    if (el.__gsapFlairInited) return;
-    el.__gsapFlairInited = true;
-    new GsapFlairButton(el);
+  const bounceIcon = () => {
+    if (!icon) return;
+    gsap.killTweensOf(icon);
+    gsap.fromTo(
+      icon,
+      { scale: 1 },
+      {
+        scale: 0.75,
+        duration: 0.16,
+        yoyo: true,
+        repeat: 1,
+        ease: "power2.out",
+      }
+    );
   };
 
-  // Init all static buttons already in DOM
-  document.querySelectorAll("[data-gsap-button]").forEach((el) => window.initGsapFlairButton(el));
+  // ------------------------
+  // Hover enter
+  // ------------------------
+  btn.addEventListener("mouseenter", () => {
+    gsap.killTweensOf([flair, t1, t2, t3]);
+
+    // flair: bottom -> center
+    gsap.set(flair, { yPercent: 100 });
+    gsap.to(flair, {
+      yPercent: 0,
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    // text motion: all 0 -> -100
+    gsap.to([t1, t2, t3], {
+      yPercent: -100,
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    // clipping: t1 hides, t2 shows, t3 stays hidden
+    gsap.to(t1, {
+      clipPath: "inset(100% 0% 0% 0)",
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    gsap.to(t2, {
+      clipPath: "inset(0% 0% 0% 0)",
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    gsap.set(t3, { clipPath: "inset(100% 0% 0% 0)" });
+
+    bounceIcon();
+  });
+
+  // ------------------------
+  // Hover leave
+  // ------------------------
+  btn.addEventListener("mouseleave", () => {
+    gsap.killTweensOf([flair, t1, t2, t3]);
+
+    // flair: center -> top
+    gsap.to(flair, {
+      yPercent: -100,
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    // text motion: all -100 -> -200
+    gsap.to([t1, t2, t3], {
+      yPercent: -200,
+      duration: 0.5,
+      ease: "expo.out",
+      onComplete() {
+        // reset everything back to initial only when truly not hovered
+        if (!btn.matches(":hover")) {
+          gsap.set(flair, { yPercent: 100 });
+          gsap.set(t1, { yPercent: 0, clipPath: "inset(0% 0% 0% 0)" });
+          gsap.set([t2, t3], {
+            yPercent: 0,
+            clipPath: "inset(100% 0% 0% 0)",
+          });
+        }
+      },
+    });
+
+    // clipping: t2 hides, t3 shows
+    gsap.to(t2, {
+      clipPath: "inset(100% 0% 0% 0)",
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    gsap.to(t3, {
+      clipPath: "inset(0% 0% 0% 0)",
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    bounceIcon();
+  });
+};
+
+// init for static DOM
+document.querySelectorAll("[data-flair-btn]").forEach((btn) => window.initFlairButton(btn));
 
   // -----------------------
   // Back To Top
@@ -153,68 +260,88 @@
  // -----------------------
 // SplitText: heading + paragraph per section
 // -----------------------
+ 
 
 document.fonts.ready.then(() => {
-gsap.utils.toArray("section").forEach((section) => {
-  const heading = section.querySelectorAll(".animate-heading");
-  const paragraph = section.querySelectorAll(".animate-paragraph");
+  gsap.utils.toArray("section").forEach((section) => {
+    const heading = section.querySelectorAll(".animate-heading");
+    const paragraph = section.querySelectorAll(".animate-paragraph");
 
-  if (!heading.length && !paragraph.length) return;
+    if (!heading.length && !paragraph.length) return;
 
-  let splitHeading, splitParagraph;
+    let splitHeading, splitParagraph;
 
-  if (heading.length) {
-    splitHeading = SplitText.create(heading, {
-      type: "words,lines,chars",
-      linesClass: "line",
-      mask: "lines",
+    if (heading.length) {
+      splitHeading = SplitText.create(heading, {
+        type: "lines, words",
+        linesClass: "line",
+        mask: "words",
+      });
+    }
+
+    if (paragraph.length) {
+      splitParagraph = SplitText.create(paragraph, {
+        type: "lines, words",
+        linesClass: "line",
+        mask: "words",
+      });
+    }
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        once: true,
+      },
     });
-  }
-
-  if (paragraph.length) {
-    splitParagraph = SplitText.create(paragraph, {
-      type: "lines",
-      linesClass: "line",
-      mask: "lines",
-    });
-  }
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: section,
-      start: "top 80%",
-      once: true,
-    },
+ 
+    if (splitHeading) {
+      tl.fromTo(
+        splitHeading.lines,
+        {
+          clipPath: "inset(0% 0% 100% 0%)",
+          opacity: 0,
+          yPercent: 200,
+          scaleX: 0.95,
+          rotateX: 60
+        },
+        {
+          clipPath: "inset(0% 0% 0% 0%)",
+          opacity: 1,
+          yPercent: 0,
+          scaleX: 1,
+          duration: 1.2,
+          stagger: 0.1,
+          rotateX: 0,
+          transformOrigin: "50% 100%",
+          ease: "expo.out",
+          delay: 0.2
+        }
+      );
+    }
+  
+    if (splitParagraph) {
+      tl.from(
+        splitParagraph.lines,
+        {
+          duration: 1.0,
+          yPercent: 100,
+          opacity: 0,
+          clipPath: "inset(0% 0% 100% 0%)",
+          transformOrigin: "50% 100%",
+          stagger: 0.08,
+          ease: "expo.out",
+        },
+        "-=0.8"  
+      );
+    }
   });
 
-  if (splitHeading) {
-    tl.from(splitHeading.chars, {
-      duration: 0.6,
-      y: 100,
-      opacity: 0,
-      stagger: 0.02,
-      ease: "expo.out",
-    });
-  }
-
-  if (splitParagraph) {
-    tl.from(
-      splitParagraph.lines,
-      {
-        duration: 1,
-        y: 100,
-        opacity: 0,
-        stagger: 0.1,
-        ease: "expo.out",
-      },
-      "-=0.6"
-    );
-  }
+   
+  ScrollTrigger.refresh();
 });
 
-ScrollTrigger.refresh();
-});
-
+ 
 // -----------------------
 // Fade-In per section
 // -----------------------
