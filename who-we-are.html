@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Informotion</title>
+    <title>Who we are | Informotion</title>
     <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- Main CSS -->
     <link href="./assets/css/style.css" rel="stylesheet" />
   </head>
-  <body class="font-sans antialiased bg-background text-foreground text-base flex flex-col">
+  <body class="font-sans antialiased bg-primary text-foreground text-base flex flex-col">
 
 
     <!-- Smooth Scroll Wrapper -->
@@ -18,7 +18,7 @@
       <div id="smooth-content">
 
           <!-- Header -->
-        <header data-animate-fade-in id="header"
+        <header id="header"
         x-data="{
           showMobileMenu: false,
 
@@ -33,7 +33,7 @@
             })
           }
         }"
-      class="absolute top-0 inset-x-0 z-20 bg-dark-blue text-background">
+      class="absolute top-0 inset-x-0 z-20 bg-dark-blue text-foreground">
         <div class="container relative z-50">
           <div class="flex relative justify-between items-center pb-8 pt-8 xl:pt-12">
             <a href="./home.html">
@@ -385,16 +385,11 @@
      
         <!-- Mobile Menu -->
         <div x-cloak x-collapse x-collapse.duration.500ms class="!ease-in-out fixed inset-0 z-40" x-show="showMobileMenu">
-          <div class="bg-foreground text-background border-t border-background/10 relative z-0">
-            <div class="absolute inset-0 size-full -z-10 overflow-hidden">
-              <video class="size-full object-cover" width="1920" height="1080" preload="auto" autoplay muted playsinline loop poster="assets/images/posters/informotion-gradient-animation.jpg">
-                <source src="assets/videos/informotion-gradient-animation.mp4" type="video/mp4"> Your browser does not support the video tag.
-              </video>
-            </div>
+          <div class="bg-primary text-foreground border-t border-background/10 relative z-0">
             <div class="container">
               <nav class="flex flex-col xl:hidden items-center text-2xl gap-8 h-svh justify-center">
-                <a href="#">Who We Are</a>
-                <a href="#">What We Do</a>
+                <a href="who-we-are.html">Who We Are</a>
+                <a href="what-we-do.html">What We Do</a>
                 <a href="#">Our Products & Platforms</a>
                 <a href="#">Customer Stories</a>
                 <a href="#">Our Insights</a>
@@ -406,78 +401,26 @@
         </header>
 
         <!-- Hero Section -->
-        <section class="relative z-0 text-background">
-          <div class="absolute inset-0 size-full -z-10 overflow-hidden">
-            <video class="size-full object-cover" width="1920" height="1080" preload="auto" autoplay muted playsinline loop poster="assets/images/posters/informotion-gradient-animation.jpg">
-              <source src="assets/videos/informotion-gradient-animation.mp4" type="video/mp4"> Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="container">
-            <div class="py-12 md:py-16 lg:py-20 xl:py-24 min-h-svh h-[500px] xl:h-[600px] flex flex-col justify-between gap-20">
-              <div class="flex flex-col gap-5 lg:gap-10 w-full max-w-[1060px] mt-auto">
-                <h1 data-animate-heading class="title">
-                  <div class="font-medium">Information in motion.</div>
-                  <div class="font-normal md:-mt-4">Intelligence in action.</div>
-                </h1>
-                <div class="flex flex-col lg:flex-row justify-between items-start gap-5 lg:gap-24">
-                  <p data-animate-paragraph class="max-w-[610px]">We enable organisations to master their information. Securing, governing, and modernising data, while unlocking the power of Cloud, AI and analytics to deliver insight, confidence and lasting transformation. </p>
-                  <div data-animate-fade-up class="flex items-start md:items-center flex-col md:flex-row gap-3 md:gap-5">
-                    <!-- Animated Button -->
-                    <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
-                      <!-- flair layer -->
-                      <span data-flair-bg class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"></span>
-                      <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
-                        <span>Who We Are</span>
-                        <span>Who We Are</span>
-                        <span>Who We Are</span>
-                      </div>
-                      <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
-                        <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
-                          <svg data-flair-icon class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_8176_59)">
-                              <path d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_8176_59">
-                                <rect width="29.858" height="29.858" fill="white" transform="translate(0 21.1128) rotate(-45)" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
-                    <!-- Animated Button -->
-                    <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
-                      <!-- flair layer -->
-                      <span data-flair-bg class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"></span>
-                      <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
-                        <span>Products & Platforms</span>
-                        <span>Products & Platforms</span>
-                        <span>Products & Platforms</span>
-                      </div>
-                      <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
-                        <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
-                          <svg data-flair-icon class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_8176_59)">
-                              <path d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_8176_59">
-                                <rect width="29.858" height="29.858" fill="white" transform="translate(0 21.1128) rotate(-45)" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
+        <section class="overflow-hidden bg-primary text-foreground pt-24 md:pt-28 xl:pt-36">
+          <div class="relative z-0">
+            <div class="absolute inset-0 size-full -z-10 overflow-hidden">
+              <video class="size-full object-cover" width="1868" height="1312" preload="auto" autoplay muted playsinline loop poster="assets/images/posters/informotion-dots-animation.jpg">
+                <source src="assets/videos/informotion-dots-animation-primary.mp4" type="video/mp4"> Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="container">
+              <div class="pb-20 pt-28 md:pt-44 md:pb-38 grid -mx-10 lg:mx-0 lg:grid-cols-1 3xl:grid-cols-[1720px] items-end min-h-[calc(100svh_-_144px)]">
+                <div class="flex flex-col gap-5 md:gap-10 bg-primary pl-10 lg:pl-0 pr-10 xl:pr-24 py-12 relative after:hidden after:lg:block after:left-0 after:top-0 after:bottom-0 after:absolute after:-translate-x-full after:bg-primary after:w-full after:h-full">
+                  <h1 data-animate-heading class="title"><span class="font-medium">From chaos to clarity, governance to innovation — </span>trusted mastery guiding a smarter, AI-ready future.</h1>
+                  <div data-animate-paragraph class="max-w-[622px]">
+                    <p>Informotion combines governance expertise with future-ready technology to help organisations bring order to complexity, transform data into purposeful insight, and evolve with confidence. </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+      
         <!-- Section -->
         <section class="my-20 md:my-24 lg:my-28 xl:my-32">
           <div class="container">
@@ -1013,7 +956,7 @@
             </video>
           </div>
           <div class="container">
-            <div class="py-20 md:py-24 grid lg:grid-cols-[1200px_1fr] 2xl:grid-cols-[1320px_1fr] items-center min-h-[644px]">
+            <div class="py-20 md:py-24 grid lg:grid-cols-[1200px_1fr] 2xl:grid-cols-[1400px_1fr] items-center min-h-[644px]">
               <div class="flex flex-col gap-10 bg-background pl-5 -mx-5 md:mx-0 3xl:-ml-10 lg:pr-0 pr-5 xl:pr-24 py-12 relative">
                 <h2 class="title" data-animate-heading>Speak with our team about tailored data solutions</h2>
                 <div data-animate-fade-up class="2xl:absolute right-44 bottom-18">
@@ -1047,6 +990,8 @@
             </div>
           </div>
         </section>
+
+
         <footer class="pb-10 pt-20 md:py-24 lg:py-28">
           <div class="container">
             <div class="flex flex-col xl:flex-row justify-between gap-10 lg:gap-10 2xl:gap-32">

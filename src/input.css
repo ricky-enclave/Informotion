@@ -51,20 +51,20 @@ html, body, .scrollbar {
    @apply mx-auto w-full !max-w-[var(--container-max-width)] px-[var(--container-padding)] max-3xl:px-[var(--container-padding-3xl)] max-md:px-[var(--container-padding-md)];
  }
  .title {
-  @apply text-[55px] md:text-[68px] lg:text-[90px] xl:text-[105px] leading-[1.2] md:leading-[1.16]
+  @apply text-[45px] md:text-[68px] lg:text-[90px] 2xl:text-[100px] 3xl:text-[105px] leading-[1.2] md:leading-[1.16]
  }
 
  h2, .h2 {
-  @apply text-[40px] md:text-[50px] lg:text-[60px] xl:text-[75px] leading-[1.17]
+  @apply text-[36px] md:text-[50px] lg:text-[60px] xl:text-[75px] leading-[1.17]
  }
 
  h3, .h3 {
-  @apply text-[32px] md:text-[36px] lg:text-[40px] xl:text-[45px] leading-none
+  @apply text-[28px] md:text-[36px] lg:text-[40px] xl:text-[45px] leading-none
  }
 
 
  h4, .h4 {
-  @apply text-[22px] md:text-[26px] lg:text-[30px] leading-[1.2]
+  @apply text-[20px] md:text-[26px] lg:text-[30px] leading-[1.2]
  }
 
  h5, .h5 {
