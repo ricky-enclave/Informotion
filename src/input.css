@@ -29,6 +29,11 @@ html, body, .scrollbar {
     --color-primary: #5A5AFA;
     
     --breakpoint-3xl: 1920px;
+    --breakpoint-2xl: 1536px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-md: 768px;
+    --breakpoint-sm: 640px;
     /* Container Settings */
     --container-max-width: 1760px;
     --container-padding: 40px;
@@ -38,6 +43,10 @@ html, body, .scrollbar {
  
 
 @layer components {
+  [x-clock] {
+    @apply hidden;
+  }
+
  .container {
    @apply mx-auto w-full !max-w-[var(--container-max-width)] px-[var(--container-padding)] max-3xl:px-[var(--container-padding-3xl)] max-md:px-[var(--container-padding-md)];
  }
@@ -47,6 +56,10 @@ html, body, .scrollbar {
 
  h2, .h2 {
   @apply text-[40px] md:text-[50px] lg:text-[60px] xl:text-[75px] leading-[1.17]
+ }
+
+ h3, .h3 {
+  @apply text-[32px] md:text-[36px] lg:text-[40px] xl:text-[45px] leading-none
  }
 
 
@@ -60,9 +73,20 @@ html, body, .scrollbar {
 
 
  p, .p {
-  @apply text-[17px] leading-[1.42]
+  @apply text-lg leading-[1.42]
  }
+
+ .number {
+  @apply text-[44px] md:text-[56px] lg:text-[64px] xl:text-[75px] 3xl:text-[80px] leading-normal font-medium whitespace-nowrap
+ }
+
+
+
 }
+
+.c-ease-in-out {
+  transition-timing-function:cubic-bezier(0.86, 0, 0.14, 0.98)
+ }
 
 
  
