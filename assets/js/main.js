@@ -335,6 +335,33 @@
   }
 
   // -----------------------
+  // Testimonials: Info slider + pager
+  // -----------------------
+
+  const testimonialsEl = document.querySelector("[data-testimonials-swiper]");
+  if (testimonialsEl && typeof window.Swiper !== "undefined") {
+
+  new Swiper(testimonialsEl, {
+    speed: 600,
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+
+    navigation: {
+      nextEl: ".js-testimonials-next",
+      prevEl: ".js-testimonials-prev",
+    },
+
+    pagination: {
+      el: ".js-testimonials-pagination",
+      // clickable: true,
+    },
+  });
+ }
+  
+
+  // -----------------------
   // Logo marquee (GSAP)
   // -----------------------
   function initLogoMarquee(root) {
@@ -417,5 +444,140 @@
       );
     });
   }
+
+  // -----------------------
+// Timeline (VERTICAL DOT) — pin + scrub steps
+// -----------------------
+function initTimelineVertical() {
+  const section = document.querySelector("[data-timeline-section]") || document.querySelector("[data-timeline]")?.closest("section");
+  if (!section || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+  const timeline = section.querySelector("[data-timeline]");
+  const dot = section.querySelector("[data-timeline-dot]");
+  const yearEls = Array.from(section.querySelectorAll("[data-timeline-year]"));
+
+  
+  const entries = Array.from(section.querySelectorAll("[data-timeline-entry]"));
+  const entriesWrapper = section.querySelector("[data-timeline-entries]");
+
+  if (!timeline || !dot || yearEls.length === 0) return;
+
+  // ----------------------
+  // Dot Y positions (center of each year label)
+  // ----------------------
+  const getPositions = () => {
+    const barRect = timeline.getBoundingClientRect();
+    return yearEls.map((year) => {
+      const r = year.getBoundingClientRect();
+      // y position inside timeline box (relative)
+      return r.top + r.height / 2 - barRect.top;
+    });
+  };
+
+  let positions = getPositions();
+
+  const moveDot = gsap.quickTo(dot, "y", {
+    duration: 0.6,
+    ease: "power2.out",
+  });
+
+  // ----------------------
+  // Active state
+  // ----------------------
+  let currentIndex = 0;
+
+  const setActive = (index) => {
+    if (index === currentIndex) return;
+    currentIndex = index;
+
+    yearEls.forEach((el, i) => el.classList.toggle("is-active", i === index));
+
+    // If you still use entries (old version), fade between them
+    if (entries.length) {
+      entries.forEach((entry, i) => {
+        gsap.to(entry, {
+          autoAlpha: i === index ? 1 : 0,
+          duration: 0.6,
+          ease: "power2.out",
+          overwrite: "auto",
+        });
+      });
+    }
+
+    moveDot(positions[index]);
+  };
+
+  // initial
+  yearEls.forEach((el, i) => el.classList.toggle("is-active", i === 0));
+  moveDot(positions[0]);
+
+  // old version: initial visibility + auto wrapper height
+  const resizeWrapper = () => {
+    if (!entriesWrapper || !entries.length) return;
+
+    let maxH = 0;
+    entries.forEach((entry) => {
+      const prevPos = entry.style.position;
+      const prevTop = entry.style.top;
+      const prevLeft = entry.style.left;
+      const prevRight = entry.style.right;
+      const prevBottom = entry.style.bottom;
+
+      entry.style.position = "static";
+      entry.style.top = entry.style.left = entry.style.right = entry.style.bottom = "";
+
+      const h = entry.offsetHeight;
+      if (h > maxH) maxH = h;
+
+      entry.style.position = prevPos || "absolute";
+      entry.style.top = prevTop || "0";
+      entry.style.left = prevLeft || "0";
+      entry.style.right = prevRight || "0";
+      entry.style.bottom = prevBottom || "0";
+    });
+
+    entriesWrapper.style.height = maxH + "px";
+  };
+
+  if (entries.length) {
+    entries.forEach((entry, i) => gsap.set(entry, { autoAlpha: i === 0 ? 1 : 0 }));
+    resizeWrapper();
+  }
+
+  // ----------------------
+  // One ScrollTrigger controlling all steps
+  // ----------------------
+  const st = ScrollTrigger.create({
+    trigger: section,
+    start: window.screen.width > 1024 ? "center center" :  "30% top",
+    end: () => "+=" + window.innerHeight * 0.6 * (yearEls.length - 1),
+    pin: true,
+    scrub: true,
+    // markers: true,
+    onUpdate: (self) => {
+      const step = Math.round(self.progress * (yearEls.length - 1));
+      const clamped = Math.min(yearEls.length - 1, Math.max(0, step));
+      setActive(clamped);
+    },
+  });
+
+  // Recalc on resize / refresh / load
+  const recalc = () => {
+    positions = getPositions();
+    moveDot(positions[currentIndex]);
+    resizeWrapper();
+    st?.refresh();
+  };
+
+  window.addEventListener("resize", recalc);
+  ScrollTrigger.addEventListener("refreshInit", recalc);
+
+  window.addEventListener("load", () => {
+    recalc();
+    ScrollTrigger.refresh();
+  });
+}
+
+initTimelineVertical();
   
 })();
