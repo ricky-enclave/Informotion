@@ -85,6 +85,10 @@ html, body, .scrollbar {
  .number {
   @apply text-[44px] md:text-[56px] lg:text-[64px] xl:text-[75px] 3xl:text-[80px] leading-normal font-medium whitespace-nowrap
  }
+
+ .qoute {
+  @apply text-[24px] md:text-[28px] xl:text-[35px] leading-[1.15]
+ }
 }
 
 .c-ease-in-out {
