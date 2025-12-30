@@ -335,6 +335,34 @@
   }
 
   // -----------------------
+  // Swiper: Related slider 
+  // -----------------------
+  const relatedEl = document.querySelector(".relatedSwiper");
+
+  if (relatedEl && typeof window.Swiper !== "undefined") {
+
+    const relatedEl = new Swiper(".relatedSwiper", {
+      speed: 400,
+      spaceBetween: 20,
+      loop: false,
+
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+
+      navigation: {
+        nextEl: ".js-related-next",
+        prevEl: ".js-related-prev",
+      },
+
+      breakpoints: {
+        0: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 16 },
+        1024: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 20 },
+        1280: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 20 },
+      },
+    });
+  }
+
+  // -----------------------
   // Testimonials: Info slider + pager
   // -----------------------
 

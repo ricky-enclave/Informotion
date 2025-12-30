@@ -89,6 +89,9 @@ html, body, .scrollbar {
  .qoute {
   @apply text-[24px] md:text-[28px] xl:text-[35px] leading-[1.15]
  }
+ .qoute-lg {
+  @apply text-[40px] md:text-[52px] xl:text-[80px] leading-[1.15]
+ }
 }
 
 .c-ease-in-out {
