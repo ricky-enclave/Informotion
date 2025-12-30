@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customer Stories | Informotion</title>
+    <title>Contact Us | Informotion</title>
     <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- Main CSS -->
     <link href="./assets/css/style.css" rel="stylesheet" />
   </head>
-  <body class="font-sans antialiased bg-primary text-foreground text-base flex flex-col">
+  <body class="font-sans antialiased bg-background text-foreground text-base flex flex-col">
 
 
     <!-- Smooth Scroll Wrapper -->
@@ -18,7 +18,7 @@
       <div id="smooth-content">
 
           <!-- Header -->
-        <header id="header"
+        <header data-animate-fade-in id="header"
         x-data="{
           showMobileMenu: false,
 
@@ -33,7 +33,7 @@
             })
           }
         }"
-      class="absolute top-0 inset-x-0 z-20 bg-dark-blue text-foreground">
+      class="absolute top-0 inset-x-0 z-20 bg-dark-blue text-foreground bg-background">
         <div class="container relative z-50">
           <div class="flex relative justify-between items-center py-8 xl:py-12">
             <a href="./home.html">
@@ -385,11 +385,11 @@
      
         <!-- Mobile Menu -->
         <div x-cloak x-collapse x-collapse.duration.500ms class="!ease-in-out fixed inset-0 z-40" x-show="showMobileMenu">
-          <div class="bg-primary text-foreground border-t border-background/10 relative z-0">
+          <div class="bg-background text-foreground border-t border-background/10 relative z-0">
             <div class="container">
               <nav class="flex flex-col xl:hidden items-center text-2xl gap-8 h-svh justify-center">
-                <a href="who-we-are.html">Who We Are</a>
-                <a href="what-we-do.html">What We Do</a>
+                <a href="#">Who We Are</a>
+                <a href="#">What We Do</a>
                 <a href="#">Our Products & Platforms</a>
                 <a href="#">Customer Stories</a>
                 <a href="#">Our Insights</a>
@@ -400,314 +400,56 @@
         </div>
         </header>
 
-        <!-- Hero Section -->
-        <section class="overflow-hidden bg-primary text-foreground pt-24 md:pt-28 xl:pt-36">
-          <div class="relative z-0">
-            <div class="absolute inset-0 size-full -z-10 overflow-hidden">
-              <video class="size-full object-cover mix-blend-color" width="1868" height="1312" preload="auto" autoplay muted playsinline loop poster="assets/images/posters/informotion-dots-animation.jpg">
-                <source src="assets/videos/informotion-dots-animation-primary.mp4" type="video/mp4"> Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="container">
-              <div class="pb-20 pt-32 md:pt-48 md:pb-38 grid -mx-10 lg:mx-0 lg:grid-cols-1 3xl:grid-cols-[1720px] items-end min-h-[calc(100svh_-_144px)]">
-                <div class="flex flex-col gap-5 md:gap-10 bg-primary max-w-max pl-10 lg:pl-0 pr-10 xl:pr-24 py-12 relative after:hidden after:lg:block after:left-0 after:top-0 after:bottom-0 after:absolute after:-translate-x-full after:bg-primary after:w-full after:h-full">
-                  <h1 data-animate-heading class="title"><span class="font-medium">At Informotion our clients </span><br/>are always front and centre.</h1>
-                  <div data-animate-paragraph class="max-w-[688px]">
-                    <p>We put our customers at the centre of everything we do – it is a core tenant of our culture and a driver behind our people’s passion. Our global team have expertise
-                      in navigating the complex journey of digital transformation, aligning people, processes, and technology to successfully deliver business value and meaningful outcomes.  </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- Contact Section -->
+        <section class="relative z-0 text-background">
+          <div class="absolute inset-0 size-full -z-10 overflow-hidden">
+            <video class="size-full object-cover" width="1920" height="1080" preload="auto" autoplay muted playsinline loop poster="assets/images/posters/informotion-gradient-animation.jpg">
+              <source src="assets/videos/informotion-gradient-animation.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
           </div>
-        </section>
-
-
-        <!-- Secure Section -->
-        <section class="py-20 md:py-24 lg:py-28 xl:py-32 relative z-0 bg-primary text-foreground">
           <div class="container">
-            <div class="flex flex-col gap-10 md:gap-14">
-              <h2 data-animate-heading class="max-w-[1320px] 3xl:max-w-[1422px]">Secure and modernise data to deliver insight and confident transformation.</h2>
-              <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-                <div data-animate-fade-up class="bg-foreground text-background px-5 py-7 md:p-8 rounded-2xl md:rounded-[30px] flex flex-col gap-5 md:gap-10 lg:min-h-[540px]">
-                  <h3 class="lg:min-h-[135px]">It's about understanding your journey.</h3>
-                  <p>
-                    Our success framework ensures we understand the business challenge, your priorities, processes and success metrics for delivering against your data governance and AI transformation objectives. Wherever you are in your journey, Informotion will help you navigate the path to success. 
-                  </p>
-                </div>
-                <div data-animate-fade-up class="bg-foreground text-background px-5 py-7 md:p-8 rounded-2xl md:rounded-[30px] flex flex-col gap-5 md:gap-10 lg:min-h-[540px]">
-                  <h3 class="lg:min-h-[135px]">We focus on you.</h3>
-                  <p>
-                    To deliver business outcomes and strategic value quickly, we partner with you to understand and leverage your existing investments in people, technology, and information assets. Informotion will work with you to determine the best path forward, this may be uplifting legacy applications with Agentic AI, updating and automating processes or augmenting your in-house skills with our expert consulting team. From pre-sales to support, our team works collaboratively with you to build a lasting strategic partnership that caters to your specific needs. 
-                  </p>
-                </div>
-                <div data-animate-fade-up class="bg-foreground text-background px-5 py-7 md:p-8 rounded-2xl md:rounded-[30px] flex flex-col gap-5 md:gap-10 lg:min-h-[540px]">
-                  <h3 class="lg:min-h-[135px]">Measuring Success</h3>
-                  <p>
-                    Customer Success means using data and metrics to measure achievement of agreed outcomes and business value - outside traditional project milestones. This proactive measurement provides visibility into areas that require additional attention and resources, or a change in approach to achieve success. 
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-         <!-- Section -->
-         <section class="pb-20 md:pb-24 lg:pb-28 xl:pb-32 bg-primary text-foreground">
-          <div class="container">
-            <div class="grid xl:grid-cols-12 gap-10 md:gap-16 lg:gap-20">
-              <div class="flex flex-col gap-5 md:gap-10 relative xl:col-span-4">
-                <h2 data-animate-heading>Our Partners</h2>
-                <div data-animate-paragraph>
-                  <p>Informotion is trusted by government and regulated organisations globally to address their data and information governance challenges. Our client base includes Local, State & County, Federal and Central Government departments, Utilities, Education, Financial Services & Insurance and Pharmaceutical & Life Sciences across Australia, the UK & Ireland and the United States.</p>
-                </div>
-              </div>
-              <div class="xl:col-span-8 flex flex-col gap-7">
-               
-                <div data-animate-fade-up x-data="{ open: 1, items: [
-                  { id: 1, title: 'Government (EMEA)' },
-                  { id: 2, title: 'Financial Services & Insurance' },
-                  { id: 3, title: 'Utlities' },
-                  { id: 4, title: 'Education' },
-                  { id: 5, title: 'Pharmaceuticals & Life Sciences' },
-              ] }" class="flex flex-col gap-2">
-                  <template x-for="item in items" :key="item.id">
-                    <div class="rounded-2xl md:rounded-[30px] bg-foreground text-background flex flex-col py-3 px-4 md:px-7">
-                      <!-- Button -->
-                      <button class="w-full cursor-pointer flex items-center justify-between gap-4" @click="open === item.id ? open = null : open = item.id">
-                        <h5 class="font-medium" x-text="item.title"></h5>
-                        <span class="flex size-3.5 items-center justify-center">
-                          <!-- Show Plus / Minus -->
-                          <span x-show="open !== item.id">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <line x1="7" y1="1" x2="7" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                              <line x1="13" y1="7" x2="1" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                          </span>
-                          <span x-show="open === item.id">
-                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 2C0.447715 2 3.91405e-08 1.55228 8.74228e-08 0.999999C1.35705e-07 0.447714 0.447715 -1.18478e-06 1 -1.1365e-06L13 -8.74228e-08C13.5523 -3.91405e-08 14 0.447715 14 1C14 1.55228 13.5523 2 13 2L1 2Z" fill="currentColor"/>
-                            </svg>  
-                          </span>
-                        </span>
-                      </button>
-                      <!-- Content -->
-                      <div class="flex flex-col items-start" x-show="open === item.id" x-collapse>
-                        <div class="mt-5 mb-2">
-                        <p>Informotion’s highly skilled EMEA team has extensive experience working with government departments, agencies, and semi-state bodies in the UK and Ireland. We deliver information governance and records management solutions using local resources and knowledge. 
-                          <br/><br/>
-                          Our approach centres on developing and implementing a unified compliance platform that seamlessly integrates process, records and privacy data. We can help you strengthen your governance posture with clear taxonomies, ownership, and an embedded compliance culture. Our approach delivers streamlined operations, improved compliance outcomes, and robust, automated risk reporting that aligns with your strategic priorities. 
-                        </p>
-                        <div class="flex justify-center w-full my-8">
-                          <img width="475" height="378" class="size-full object-cover aspect-475/378 max-w-[475px] mx-auto rounded-2xl md:rounded-[30px]" src="assets/images/customer-stories/our-partners.png" alt="our-partners">
-                        </div>
-                        
-                        <p>Informotion EMEA’s services include.</p><br/>
-                        <ul class="ul">
-                          <li>Configuration & enterprise deployment of electronic document and records management systems (EDRMS)</li>
-                          <li>ROT analysis to identify redundant, outdated and trivial information</li>
-                          <li>Technology advice for cloud migration and data segregation</li>
-                          <li>Development of retention schedules</li>
-                          <li>Gap analysis and maturity assessments </li>
-                          <li>Change management programs to embed governance practices</li>
-                        </ul>
-                        <br/>
-                      <p>In addition, Informotion provides strategic consultancy, policy development, and thought leadership to help public sector organisations build sustainable information management ecosystems. </p>
-                      <br/>
-                      <h5>Informotion is on the G-Cloud Panel </h5>
-                      <br/>
-                      <p>The Digital Marketplace is an online service for UK public sector organisations to find people and technology for digital projects. Suppliers must apply to sell services and there are three service frameworks available. 
-                        <br/><br/>
-                        Informotion is approved to supply under the G-Cloud framework covering cloud software and services. We sell, implement and support the EncompaaS intelligent information management platform.
-                        <br/><br/>
-                      For more information visit the Informotion G-Cloud offering page</p>
-                      <div class="mt-7">
-                        <!-- Animated Button -->
-                        <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-background text-foreground text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
-                          <!-- flair layer -->
-                          <span data-flair-bg class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"></span>
-                          <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
-                            <span>Read more</span>
-                            <span>Read more</span>
-                            <span>Read more</span>
-                          </div>
-                          <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
-                            <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
-                              <svg data-flair-icon class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_8176_59)">
-                                  <path d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                  <path d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_8176_59">
-                                    <rect width="29.858" height="29.858" fill="white" transform="translate(0 21.1128) rotate(-45)" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </div>
-                          </div>
-                        </button>
-                      </div>
-                      </div>
-                      </div>
-                    </div>
-
-                     
-                  </template>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="pb-20 md:pb-24 lg:pb-28 xl:pb-32 relative z-0 bg-primary text-foreground">
-          <div class="container">
-            <div class="flex flex-col gap-10 md:gap-14">
-                <div class="flex flex-col xl:flex-row gap-10 md:gap-16 lg:gap-20 2xl:gap-32 xl:items-start">
-                <div class="flex flex-col gap-5 xl:col-span-5 md:gap-10">
-                  <h2 data-animate-heading>Serving Government in Australia</h2>
-                  <div data-animate-paragraph>
-                    <p class="xl:max-w-[632px]">Informotion’s team has been guiding Government organisations in Australia through information management and digital transformation for more than 25 years – we are trusted by Federal, State and Local Government to solve their most challenging data and information governance challenges. From paper records management through to cloud and AI, we have helped government departments secure, classify, retain and dispose of information in accordance with regulatory requirements to support Ministerial enquiries, Royal Commissions, Freedom of Information Requests and Privacy requirements. 
-                      <br/><br/>
-                      Informotion has a proven track record in delivering the following for government organisations: </p>
-                  </div>
-                  <div data-animate-fade-up>
-                    <ul class="ul xl:max-w-[719px]">
-                       <li>Ministerial Briefing System design and development</li>
-                       <li>Information Governance capability development and implementation strategy</li>
-                       <li>Information Architecture strategy and design</li>
-                       <li>Organizational Change programs for enterprise information management systems</li>
-                       <li>Cloud integration and migrations</li>
-                       <li>SharePoint integration with electronic document and records management systems</li>
-                       <li>SharePoint Information Architecture and Governance Framework</li>
-                       <li>Data consolidation and transformation</li>
-                    </ul>
-                  </div>
-                </div>
-                <div data-animate-fade-in class="xl:mt-6 animate-fade-in xl:col-span-7 overflow-hidden rounded-2xl md:rounded-[30px] xl:max-w-[540px] 2xl:max-w-[831px]">
-                  <img data-speed="0.9" width="831" height="582" class="aspect-831/582 object-cover w-full scale-150 md:scale-110" src="assets/images/home/proud-partners.webp" alt="proud partners">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-         <!-- Secure Section -->
-         <section class="pb-20 md:pb-24 lg:pb-28 xl:pb-32 relative z-0 bg-primary text-foreground">
-          <div class="container">
-            <div class="flex flex-col gap-10 md:gap-14">
-              <h2 data-animate-heading class="max-w-[1400px] 3xl:max-w-[1500px]">We are uniquely positioned to handle the requirements of small or large organisations. </h2>
-              <div class="grid xl:grid-cols-12 gap-10 md:gap-16 lg:gap-20">
-                <div class="flex flex-col gap-10 xl:gap-14 relative xl:col-span-7">
-                  <div data-animate-fade-in class="overflow-hidden rounded-2xl md:rounded-[30px] xl:max-w-[853px]">
-                    <img data-speed="0.9" width="853" height="582" class="aspect-853/582 w-full object-cover scale-150 md:scale-110" src="assets/images/home/products-platforms.webp" alt="products & platforms">
-                  </div>
-                </div>
-                <div data-animate-fade-up="" class="xl:col-span-5 flex flex-col gap-7">
-                  <div>
-                    <p>Our client base includes organization sizes that range from 100 FTE to 15,000+ FTE in some of the largest Government departments in Australia. </p>
-                    <br/>
-                    <p>Informotion is registered as a supplier on many government panel contracts including the following: </p>
-                    <br/>
-                    <ul class="ul">
-                      <li>DTA Digital Marketplace</li>
-                      <li>DTA Cloud Marketplace</li>
-                      <li>BuyNSW</li>
-                      <li>Local Government Procurement </li>
-                      <li>Tasmanian Government Tenders (Technology Services List) </li>
-                      <li>eServices Panel (Vic) </li>
-                      <li>Vendor Panel (Vic)</li>
-                      <li>Local Buy ICT (QLD, TAS, NT) </li>
-                      <li>QLD Government ICT Services Panel (ICTSS13.03) </li>
-                      <li>Vendor Panel (NT) ICT Specialist Services (D19-0147)</li>
-                    </ul>
-                    <br/>
-                    <h5>Machinery of Government</h5>
-                    <br/>
-                    <p>Informotion has built a specialist capability around Machinery of Government (MoG) transformation, helping departments navigate the complexity of data mapping and migrating across systems, reviewing and updating business processes to support information flows and compliantly disposing of content that should no longer be held following a MoG. We help to merge or split enterprise information systems and their data when departments are brought together or separated into different entities. </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-         <!-- Logo Section -->
-         <section class="py-20 md:py-24 lg:py-28 xl:py-32 relative z-0 bg-foreground text-background">
-          <div class="container">
-            <div class="flex flex-col gap-10 md:gap-20">
-              <div class="max-w-[1170px] 3xl:max-w-[1300px]">
-                <h2 data-animate-heading>Proud to guide these organisations on their data journeys.</h2>
-              </div>
-              <div data-animate-fade-up data-logo-marquee class="relative overflow-hidden"
-                x-data="{items: [
-                  { src:'assets/images/logos/rural-city-of-wangaratta.png', w:192, h:64, alt:'Rural City of Wangaratta' },
-                  { src:'assets/images/logos/uni-sydney.png', w:150, h:52, alt:'Uni Sydney' },
-                  { src:'assets/images/logos/dept-parliament.png', w:237, h:71, alt:'Dept Parliament' },
-                  { src:'assets/images/logos/australian-government.png', w:152, h:80, alt:'Australian Government' },
-                  { src:'assets/images/logos/frnsw-logo.png', w:153, h:79, alt:'FRNSW' },
-                  { src:'assets/images/logos/nsw-government.png', w:70, h:76, alt:'NSW Government' },
-                  { src:'assets/images/logos/victoria-health.png', w:177, h:53, alt:'Victoria Health' },
-                  { src:'assets/images/logos/victoria-safety.png', w:195, h:53, alt:'Victoria Safety' },
-                  { src:'assets/images/logos/port-stephens-council.png', w:201, h:56, alt:'Port Stephens Council' },
-                  { src:'assets/images/logos/westfund.png', w:144, h:61, alt:'Westfund' },
-                  { src:'assets/images/logos/natwest.png', w:200, h:30, alt:'Natwest' },
-                  { src:'assets/images/logos/bathust.png', w:174, h:60, alt:'Bathust' },
-                  { src:'assets/images/logos/nswforests.png', w:135, h:90, alt:'NSW Forests' },
-                ]}">
-              <!-- track -->
-              <div class="flex w-max" data-track>
-                <!-- ROW A -->
-                <div class="flex items-center gap-5 lg:gap-7 pr-5 lg:pr-7" data-row>
-                  <template x-for="(logo, i) in items" :key="i">
-                    <div class="p-5 h-[120px] w-[240px] flex items-center justify-center bg-white rounded-[10px] shrink-0">
-                      <img :src="logo.src" :width="logo.w" :height="logo.h" :alt="logo.alt" />
-                    </div>
-                  </template>
-                </div>
-            
-                <!-- ROW B (clone) -->
-                <div class="flex items-center gap-5 lg:gap-7 pr-5 lg:pr-7" aria-hidden="true" data-row-clone>
-                  <template x-for="(logo, i) in items" :key="'c-'+i">
-                    <div class="p-5 h-[120px] w-[240px] flex items-center justify-center bg-white rounded-[10px] shrink-0">
-                      <img :src="logo.src" :width="logo.w" :height="logo.h" :alt="logo.alt" />
-                    </div>
-                  </template>
-                </div>
-              </div>
-            </div>
-             
-            </div>
-            
-          </div>
-        </section>
-
-        <!-- Section -->
-        <section class="pb-20 md:pb-24 lg:pb-28 xl:pb-32 relative z-0 bg-foreground text-background">
-          <div class="container">
-            <div class="flex flex-col gap-10 md:gap-14">
-              <div class="flex flex-col xl:flex-row gap-10 md:gap-12 xl:items-start">
-                <div class="flex flex-col gap-5 xl:col-span-5 md:gap-10">
-                  <h2 data-animate-heading>Developing a ministerial briefing system - both usable and secure.</h2>
-                  <div data-animate-paragraph>
-                    <p class="xl:max-w-[725px]">Informotion partnered with a State Government client to design and develop a ministerial briefing system that was both usable and secure. 
-                      <br/>
-                      <br/>
-                      This State Government department is responsible for providing high quality, timely advice to key ministers and its executives. The preparation of this advice requires consultation and approval across multiple stakeholders and in some circumstances, it must be prepared in critically short timeframes. Our client was utilising their electronic document and records management system (EDRMS) to manage records and briefing documents in conjunction with a separate manual tracking system that required cross-referencing back to the EDRMS. The process was inefficient, presented usability challenges for staff, and increased the departments exposure to risk. 
-                      <br/>
-                      <br/>
-                      Informotion collaborated with the department’s key stakeholders to define the business rules and develop a detailed specification for the development of the solution – key to this was a detailed understanding of the process and desired outcomes. Of critical importance was simplification of user interaction with the EDRMS ensuring documents were created using correct templates, stored in the appropriate file and secured. Visibility of briefs as they progressed through review and approval cycles was identified as a critical requirement to ensure timeframes were met. The solution was developed and iteratively refined in close consultation with key stakeholders and process specialists to deliver a successful outcome. </p>
-                  </div>
-                  <div data-animate-fade-up>
+            <div class="py-12 md:py-16 lg:py-20 xl:py-24 min-h-svh h-[500px] xl:h-[600px] flex flex-col justify-between gap-20">
+              <div class="flex flex-col gap-5 lg:gap-10 w-full max-w-[1060px] mt-auto">
+                <h1 data-animate-heading class="title">
+                  <div class="font-medium">Information in motion.</div>
+                  <div class="font-normal md:-mt-4">Intelligence in action.</div>
+                </h1>
+                <div class="flex flex-col lg:flex-row justify-between items-start gap-5 lg:gap-24">
+                  <p data-animate-paragraph class="max-w-[610px]">We enable organisations to master their information. Securing, governing, and modernising data, while unlocking the power of Cloud, AI and analytics to deliver insight, confidence and lasting transformation. </p>
+                  <div data-animate-fade-up class="flex items-start md:items-center flex-col md:flex-row gap-3 md:gap-5">
                     <!-- Animated Button -->
-                    <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-background text-foreground text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
+                    <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
                       <!-- flair layer -->
                       <span data-flair-bg class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"></span>
                       <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
-                        <span>Contact Us</span>
-                        <span>Contact Us</span>
-                        <span>Contact Us</span>
+                        <span>Who We Are</span>
+                        <span>Who We Are</span>
+                        <span>Who We Are</span>
+                      </div>
+                      <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
+                        <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
+                          <svg data-flair-icon class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_8176_59)">
+                              <path d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_8176_59">
+                                <rect width="29.858" height="29.858" fill="white" transform="translate(0 21.1128) rotate(-45)" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                    <!-- Animated Button -->
+                    <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
+                      <!-- flair layer -->
+                      <span data-flair-bg class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"></span>
+                      <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
+                        <span>Products & Platforms</span>
+                        <span>Products & Platforms</span>
+                        <span>Products & Platforms</span>
                       </div>
                       <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
                         <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
@@ -727,100 +469,13 @@
                     </button>
                   </div>
                 </div>
-                <div data-animate-fade-in class="xl:mt-6 animate-fade-in xl:col-span-7 overflow-hidden rounded-2xl md:rounded-[30px] xl:max-w-[540px] 2xl:max-w-[831px]">
-                  <img data-speed="0.9" width="831" height="582" class="aspect-831/582 object-cover w-full scale-150 md:scale-110" src="assets/images/home/proud-partners.webp" alt="proud partners">
-                </div>
               </div>
             </div>
           </div>
         </section>
-      
-      
-      
-         <!-- Support Section -->
-         <section class="relative z-0 overflow-hidden bg-background text-foreground">
-          <div class="absolute inset-0 size-full -z-20 overflow-hidden">
-            <img data-speed="0.9" class="scale-105 size-full object-cover" src="assets/images/home/support-bg.png" alt="support"/>
-          </div>
-          <div class="absolute w-2/3 inset-y-0 bg-gradient-to-r from-[#3D3D3D]/50 to-[#D9D9D9]/0 -z-10"></div>
-          <div class="container">
-            <div class="py-24 md:py-28 lg:py-32 xl:py-44">
-              <div class="w-full flex flex-col items-start max-w-[504px] gap-5">
-                <h2 data-animate-heading>Need Support?</h2>
-                <p data-animate-paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                <div class="mt-2 md:mt-5" data-animate-fade-up>
-                  <!-- Animated Button -->
-                  <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
-                    <!-- flair layer -->
-                    <span data-flair-bg class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"></span>
-                    <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
-                      <span>Contact Us</span>
-                      <span>Contact Us</span>
-                      <span>Contact Us</span>
-                    </div>
-                    <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
-                      <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
-                        <svg data-flair-icon class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_8176_59)">
-                            <path d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_8176_59">
-                              <rect width="29.858" height="29.858" fill="white" transform="translate(0 21.1128) rotate(-45)" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div> 
-          </div>
-        </section>
-        <!-- Contact Section -->
-        <section class="relative z-0 overflow-hidden bg-background text-foreground">
-          <div class="absolute inset-0 size-full -z-10 overflow-hidden">
-            <video class="size-full object-cover mt-3 mix-blend-color" width="1868" height="1312" preload="auto" autoplay muted playsinline loop poster="assets/images/posters/informotion-dots-animation.jpg">
-              <source src="assets/videos/informotion-dots-animation.mp4" type="video/mp4"> Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="container">
-            <div class="py-20 md:py-24 grid lg:grid-cols-[1200px_1fr] 2xl:grid-cols-[1320px_1fr] items-center min-h-[644px]">
-              <div class="flex flex-col gap-10 bg-background pl-5 -mx-5 md:mx-0 3xl:-ml-10 lg:pr-0 pr-5 xl:pr-24 py-12 relative">
-                <h2 class="title" data-animate-heading>Speak with our team about tailored data solutions.</h2>
-                <div data-animate-fade-up class="2xl:absolute right-36 bottom-18">
-                  <!-- Animated Button -->
-                  <button data-flair-btn type="button" x-init="window.initFlairButton && window.initFlairButton($el)" class="group relative h-[46px] shrink-0 hover:text-foreground duration-500 bg-foreground text-background text-[15px] pl-5 cursor-pointer flex items-center justify-center rounded-full overflow-hidden">
-                    <!-- flair layer -->
-                    <span data-flair-bg class="pointer-events-none absolute inset-0 rounded-full bg-primary will-change-transform"></span>
-                    <div data-flair-text class="relative z-10 flex flex-col h-[22px] overflow-hidden">
-                      <span>Contact Us</span>
-                      <span>Contact Us</span>
-                      <span>Contact Us</span>
-                    </div>
-                    <div class="size-[43px] flex items-center justify-center relative z-10 -ml-1">
-                      <div class="size-5 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 overflow-hidden">
-                        <svg data-flair-icon class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_8176_59)">
-                            <path d="M15.2683 26.9575L24.1665 18.0593M24.1665 18.0593L16.6255 18.0593M24.1665 18.0593L24.1665 25.5238" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M-1.53901 43.7652L6.15836 36.0678M6.15836 36.0678L-1.53901 36.0678M6.15836 36.0678L6.15836 43.7652" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_8176_59">
-                              <rect width="29.858" height="29.858" fill="white" transform="translate(0 21.1128) rotate(-45)" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
+ 
+ 
 
 
         <footer class="pb-10 pt-20 md:py-24 lg:py-28 bg-background text-foreground">
